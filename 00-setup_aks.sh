@@ -45,8 +45,11 @@ az webapp create -g shiny_aks -p shinybaseplan -n myshinyserver -i vnahodildocke
 az group delete -n shiny_aks
 
 
-
-
+# TODO
+# multicontainer app - Make sure you have all images in your acr and the YAML file in the folder you execute the line from.
+az webapp create -g shinyapps -p shinyappplan -n myshinyapp
+   --multicontainer-config-type compose
+   --multicontainer-config-file docker-compose.yml
 
 
 
